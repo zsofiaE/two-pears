@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css" >
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script src="https://kit.fontawesome.com/18795bf9d8.js" crossorigin="anonymous"></script>
+  
+    <!-- googlefonts link   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <!--icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+  <title>two pears Image Gallery</title>
+
+</head>
+<body>
+   <header class="header-section">
+      <div class="header-content">
+          <h1 class="logo">two pears</h1>
+          <p class="sub-line">.experience <br>
+            .image .postcard .search </p>
+        
+          <div class="search-container">
+              <div class="search-box">
+                <!-- <button class="icon-search" onclick="searchPhotos()"><img class="search-img" src="/assets/search.png">
+                </button> -->
+                <button class="icon-search" onclick="searchPhotos()">
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                    /> 
+                  </svg>
+                </button>
+                
+                <input type="search" id="search-input" placeholder="search photos" 
+                        aria-label="Search for a images in the gallery" autocomplete="off"
+                        inputmode="search">
+              </div>
+              <button class="search-btn button" onclick="searchPhotos()">search</button>
+          </div>
+      </div>
+    </header>
+
+    <div class="image-popup hide"> 
+      <button class="close-btn button">x</button>
+      <a href="#" class="download-btn button">Download Image</a>
+      <img src="" class="image-large" alt="">
+      <button class="controls pre-btn"><span class="material-symbols-outlined">
+        navigate_before
+        </span></button>
+      <button class="controls nxt-btn"><span class="material-symbols-outlined">
+        navigate_next</span></button>
+      <button class="submit-btn button" onclick="postcardPopup()">Send as a postcard</button>
+  
+    </div>
+
+    <div class="postcard-popup hide "> 
+      <button class="close-btn button" id="postcard-close-btn">x</button>
+      <img src="" class="postcard-image" alt="">
+      <!-- <img src="assets/stamp2.png" alt="postcard stamp" class="postcard-stamp"> -->
+      <form>
+        <label for="card-title"></label><br>
+        <input id="card-title" type="text" placeholder="add title" size="20" class="input-title postcard-input" autocomplete="off"><br>
+        <label for="card-text"></label><br>
+        <textarea name="card-text" id="card-text" cols="40" rows="15" placeholder="add your text here" class="textarea postcard-input"></textarea><br>
+        <button class="submit-btn button">Send postcard</button>
+      </form>
+    </div>
+
+    <div class="gallery" id="result">
+
+    </div>
+        
+    <script src="script.js"></script>
+</body>
+</html>
